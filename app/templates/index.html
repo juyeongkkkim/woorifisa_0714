@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Main-->
+<div id="main">
+
+    <div class="container px-5" id="one">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-xxl-6">
+                <div class="text-center my-5">
+                    <h1 class="fw-bolder mb-3">Build things that build things!</h1>
+                    <p class="lead fw-normal text-muted mb-4">김주영입니다</p>
+                    <a class="btn btn-dark btn-lg" href="#scroll-target">WHO I AM</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+            <!-- About section one-->
+            <section class="py-5 bg-light about_me" id="scroll-target">
+                <div class="container px-5 my-5"  id="two">
+                    <div class="row gx-5 align-items-center">
+                        <!-- <div class="col-lg-6"><img class="img-fluid rounded mb-5 mb-lg-0" src="data/rupy.png" alt="..." /></div> -->
+                        <div class="col-lg-6"><img class="img-fluid rounded mb-5 mb-lg-0" src="{{ url_for('static', filename ='data/profile0.gif')}}" alt="..." /></div>
+                        <div class="col-lg-6">
+                            <h2 class="fw-bolder">Programmer</h2>
+                            <p class="lead fw-normal text-muted mb-0">"Life goes on"<br>
+                                그럼에도 삶은 계속된다 ...keep going 🚶‍♀️</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- About section two-->
+            <section class="py-5" id="three">
+                <div class="container px-5 my-5">
+                    <div class="row gx-5 align-items-center">
+                        <div class="col-lg-6 order-first order-lg-last"><img class="img-fluid rounded mb-5 mb-lg-0" src="{{ url_for('static', filename='data/profile.png')}}" alt="..." /></div>
+                        <div class="col-lg-6">
+                            <h2 class="fw-bolder">Technical Editor</h2>
+                            <p class="lead fw-normal text-muted mb-0">핀테크를 전공한 개발자의 눈으로<br> 잘 이해되는 설명과 잘 돌아가는 코드를 가진<br> 책을 세상에 선보이는 지식노동자</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+                <!-- <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li> -->
+                <!-- <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li> -->
+                <p>Instagram</p>
+            <li class="ftco-animate"><a href="https://www.instagram.com/yeongg._.e/"><span class="icon-instagram"></span></a></li>
+            
+          
+            </ul>
+
+</div>
+{% endblock %}
