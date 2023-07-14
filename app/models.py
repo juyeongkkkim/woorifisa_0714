@@ -5,6 +5,9 @@ class Question(db.Model):
     subject = db.Column(db.String(200), nullable=False)
     content = db.Column(db.Text(), nullable=False)
     create_date = db.Column(db.DateTime(), nullable=False)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id', ondelete='CASCADE'), nullable=False)
+    user = db.relationship('User', backref=db.backref('question_set'))
+
 
 
 class Answer(db.Model):
@@ -20,6 +23,9 @@ class Answer(db.Model):
             # 2) Answer는 남겨놓는다 
                 # Question의 id를 남겨놓는다
                 # Question의 id를 삭제한다
+    # 비어있는 
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id', ondelete='CASCADE'), nullable=True, server_default="1")
+    user = db.relationship('User', backref=db.backref('answer_set'))
 
 class User(db.Model):
     id =db.Column(db.Integer, primary_key=True)
